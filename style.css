@@ -1,0 +1,315 @@
+       /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf5e6; /* Consider changing to #fefaf1 if you prefer */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+header {
+    background-color: #e8d7c0;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4a4a4a;
+}
+
+.container {
+    max-width: 800px; /* Adjust to 900px if you want uniformity across pages */
+    margin: 3rem auto; /* Adjust margin for spacing */
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.intro {
+    font-size: 1.1rem;
+    color: #595959;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #4a4a4a;
+    font-size: 2.2rem;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #595959;
+    margin-top: 1rem;
+}
+
+.section-link {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    background-color: #a8d5ba;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.section-link:hover {
+    background-color: #91c7a3;
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* Set images to a vertical aspect ratio */
+.image-gallery img {
+    width: 100%; /* Make images responsive */
+    max-width: 250px; /* Set a narrower width */
+    height: 350px; /* Increase height to create a vertical style */
+    object-fit: cover; /* Keeps image centered while cropping */
+    border-radius: 8px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .image-gallery img {
+        max-width: 100%;
+        height: auto; /* Allow full image to show on smaller screens */
+    }
+}
+
+.jungle-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/top-view-leaves-background-removebg-preview.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    z-index: 10; /* Ensures overlay is above content initially */
+    pointer-events: none;
+    transition: transform 1s ease, opacity 1.5s ease;
+}
+
+/* Animate overlay to move outward */
+.move-overlay {
+    transform: scale(1.5); /* Adjust scale for desired effect */
+    opacity: 0;
+}
+
+footer {
+    background-color: #e8d7c0;
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mission image styles */
+.mission-img {
+    width: 65%; /* Makes the image smaller */
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Scale up and add shadow on hover */
+.mission-img:hover {
+    transform: scale(1.05); /* Slightly enlarges image on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Increases shadow */
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 2rem; /* Added bottom margin for spacing */
+    padding: 0.8rem 1.2rem;
+    background-color: #a8d5ba;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    transform: scale(1.05); /* Slightly enlarges image on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Increases shadow */
+}
+
+/* Styles for circles in list items */
+ul {
+    list-style-type: none; /* Remove default list bullets */
+    padding: 0; 
+    text-align: left; 
+    margin: 0; 
+}
+
+li {
+    font-size: 1.1rem; 
+    color: #595959; 
+    margin-bottom: 0.5rem; 
+    position: relative; /* Position relative to place circles */
+    padding-left: 25px; /* Space for the circle */
+}
+
+li::before {
+    content: ""; /* Empty content for the circle */
+    display: inline-block; 
+    width: 10px; /* Circle size */
+    height: 10px; /* Circle size */
+    background-color: #a8d5ba; /* Circle color */
+    border-radius: 50%; /* Makes the circle */
+    position: absolute; /* Position it absolutely */
+    left: 0; /* Align it to the left */
+    top: 50%; /* Center it vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+.service-category {
+    display: flex; /* Use flexbox for alignment */
+    align-items: flex-start; /* Align items at the start */
+    margin: 2rem 0; /* Margin between categories */
+}
+
+.service-content {
+    display: flex; /* Flexbox to align image and list */
+    align-items: flex-start; /* Align items at the start */
+}
+
+.section-image {
+    width: 300px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Ensures images fill the space without distortion */
+    border-radius: 10px; /* Rounded corners */
+    margin-right: 1.5rem; /* Space between image and text */
+}
+
+.service-category h3 {
+    margin-bottom: 1rem; /* Add space below the heading */
+    margin-right: 1.5rem; /* Optional: Add some space to the right of the heading */
+    color: #4a4a4a; /* Ensure the heading color matches your theme */
+}
+
+.floating-menu {
+    position: fixed; /* Keeps the menu in a fixed position */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 10px; /* Padding inside the menu */
+    z-index: 1000; /* Ensures the menu is on top */
+}
+
+.floating-menu ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.floating-menu li {
+    margin-bottom: 0.5rem; /* Space between menu items */
+}
+
+.floating-menu a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Link color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.floating-menu a:hover {
+    color: #a8d5ba; /* Change color on hover */
+}
+
+
+.contact-section {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 2rem 1rem; /* Padding for spacing */
+    border-radius: 10px; /* Rounded corners for the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 2rem 0; /* Margin around the section */
+}
+
+.contact-section h2 {
+    text-align: center; /* Centering the title */
+    color: #2c3e50; /* Darker color for the heading */
+    font-size: 2rem; /* Font size for the heading */
+    margin-bottom: 1.5rem; /* Space below the heading */
+}
+
+.contact-section label {
+    display: block; /* Labels on new lines */
+    margin: 1rem 0 0.5rem; /* Margin for spacing */
+    color: #34495e; /* Dark grey color for labels */
+    font-weight: bold; /* Bold labels */
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%; /* Full width inputs */
+    padding: 0.75rem; /* Padding for inputs */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size for inputs */
+    transition: border-color 0.3s; /* Transition for focus effect */
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border-color: #3498db; /* Border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.contact-section button {
+    background-color: #3498db; /* Primary button color */
+    color: white; /* Text color for button */
+    padding: 0.75rem; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for button */
+    font-size: 1rem; /* Font size for button */
+    margin-top: 1rem; /* Margin above the button */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.contact-section button:hover {
+    background-color: #2980b9; /* Darker color on hover */
+}
+

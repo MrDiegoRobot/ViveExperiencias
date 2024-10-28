@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vive Experiencias - Crafting Unforgettable Moments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="jungle-overlay"></div>
+
+    <header>
+        <h1>Welcome to Vive Experiencias</h1>
+    </header>
+
+    <div class="container">
+        <h2>Crafting Unforgettable Moments for Vacations and Everyday Life</h2>
+        <p class="intro">At Vive Experiencias, we are a team of passionate professionals with years of experience creating meaningful and unique events. We take pride in offering high-quality experiences that embody Costa Rica’s Pura Vida spirit, with the seriousness and reliability that our clients expect and deserve.</p>
+        
+        <div class="button-container">
+            <a href="services.html" class="section-link">Explore Our Services</a>
+            <a href="mission.html" class="section-link">Our Mission</a>
+            <a href="contact.html" class="section-link">Contact Us!</a> 
+        </div>
+
+        <div class="image-gallery">
+            <img src="images/dsadawd.jpg" alt="Event Experience 1">
+            <img src="images/dsddsdds.jpg" alt="Event Experience 2">
+            <img src="images/dwdw.jpg" alt="Event Experience 3">
+        </div>
+    </div>
+
+    <nav class="floating-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="mission.html">Our Mission</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>Contact Us:<br>
+            Phone / WhatsApp: +506 7202 6123<br>
+            Email: <a href="mailto:nadaja78@gmail.com">nadaja78@gmail.com</a>
+        </p>
+        <p>&copy; 2024 Vive Experiencias. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener("load", () => {
+            document.querySelector(".jungle-overlay").classList.add("move-overlay");
+            
+            // Optional: Remove overlay after animation to show content fully
+            setTimeout(() => {
+                document.querySelector(".jungle-overlay").style.display = "none";
+                document.body.style.overflow = "auto"; // Restore scrolling after animation
+            }, 1500); // Adjust timing to match CSS animation duration
+        });
+    </script>
+
+</body>
+</html>

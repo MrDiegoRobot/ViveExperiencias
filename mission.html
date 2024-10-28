@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mission - Vive Experiencias</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="jungle-overlay"></div>
+    <header>
+        <h1>Our Mission</h1>
+    </header>
+<div class="container">
+    <p>To provide Tamarindo’s community and visitors with enriching events that nurture the body, mind, and soul. Our goal is to create authentic, memorable experiences that leave a lasting impression on every participant.</p>
+    <img src="images/DALL·E 2024-10-27 21.13.16 - A tranquil and inviting scene in Costa Rica featuring soft pastel tones. Display a serene landscape with lush tropical greenery, gentle hills in the b.webp" alt="Our Mission at Vive Experiencias" class="mission-img">
+    <a href="index.html" class="back-link">Back to Home</a>
+</div>
+
+<nav class="floating-menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="mission.html">Our Mission</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<footer>
+    <p>Contact Us:<br>
+       Phone / WhatsApp: +506 7202 6123<br>
+       Email: <a href="mailto:nadaja78@gmail.com">nadaja78@gmail.com</a>
+    </p>
+    <p>&copy; 2024 Vive Experiencias. All Rights Reserved.</p>
+</footer>
+
+<script>
+    window.addEventListener("load", () => {
+        document.querySelector(".jungle-overlay").classList.add("move-overlay");
+        
+        // Optional: Remove overlay after animation to show content fully
+        setTimeout(() => {
+            document.querySelector(".jungle-overlay").style.display = "none";
+            document.body.style.overflow = "auto"; // Restore scrolling after animation
+        }, 1500); // Adjust timing to match CSS animation duration
+    });
+</script>
+
+</body>
+</html>
